@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Sbt Auth + TS</title>
+  </head>
+  <body>
+    <h1>SBT Auth + VanillaJs</h1>
+    <p class="address"></p>
+    <input type="checkbox" id="whitelist" name="whitelist" checked />
+    <label for="whitelist"> Use whitelist </label>
+    <div class="card">
+      <button id="connect">
+        <span id="connect-loading" hidden>
+          <i class="fa fa-spinner fa-spin"></i>
+        </span>
+        Login
+      </button>
+      <button id="logout">
+        <span id="logout-loading" hidden>
+          <i class="fa fa-spinner fa-spin"></i>
+        </span>
+        Logout
+      </button>
+      <button id="disconnect">Disconnect</button>
+      <button id="getUserInfo">Get User Info</button>
+      <button id="getAccount">Get Account</button>
+      <button id="getBalance">Get Balance</button>
+      <button id="signMessage">Sign Message</button>
+      <button id="signTransaction">Sign Transaction</button>
+    </div>
+    <p style="width: 500px; text-align: center; border-top: 3px solid #bbb; padding-top: 10px">Solana(beta)</p>
+    <div class="card">
+      <button id="getSolanaAccount">Get Account</button>
+      <button id="getSolanaBalance">Get Balance</button>
+      <button id="signSolanaMessage">Sign Message</button>
+      <button id="signSolanaTransaction">Sign Transaction</button>
+    </div>
+    <div id="login-modal" class="modal">
+      <div class="login-modal-title">
+        <span class="text-hello">HELLO!</span>
+        <span class="text-login">欢迎登录</span>
+      </div>
+      <canvas id="qrcode" hidden></canvas>
+      <input
+        class="input"
+        placeholder="请输入您的邮箱"
+        id="login-email-input"
+      />
+      <div class="divider"><span class="divider-text">or</span></div>
+      <div class="social-buttons">
+        <button id="login-twitter-button">
+          <svg
+            data-v-8aa074b4=""
+            viewBox="0 0 1024 1024"
+            width="24"
+            height="24"
+            fill="#55ACEE"
+            class="twitter-icon"
+          >
+            <path
+              d="M1024 186.368a410.325333 410.325333 0 0 1-120.618667 33.877333 214.954667 214.954667 0 0 0 92.373334-119.125333 413.781333 413.781333 0 0 1-133.504 52.181333A207.189333 207.189333 0 0 0 708.949333 85.333333c-115.968 0-210.005333 96.426667-210.005333 215.424 0 16.896 1.792 33.28 5.376 49.066667-174.592-9.002667-329.386667-94.72-433.066667-225.152a219.306667 219.306667 0 0 0-28.416 108.373333c0 74.709333 37.12 140.672 93.44 179.328a206.250667 206.250667 0 0 1-95.146666-26.88v2.645334c0 104.405333 72.405333 191.488 168.533333 211.2a200.32 200.32 0 0 1-55.296 7.594666c-13.525333 0-26.752-1.28-39.552-3.84 26.709333 85.589333 104.277333 147.882667 196.224 149.546667A414.805333 414.805333 0 0 1 0 841.941333 584.96 584.96 0 0 0 322.048 938.666667c386.474667 0 597.76-328.192 597.76-612.906667 0-9.386667-0.213333-18.730667-0.554667-27.904 41.045333-30.378667 76.672-68.266667 104.746667-111.488"
+              p-id="5529"
+            ></path>
+          </svg>
+        </button>
+        <button id="login-google-button">
+          <svg
+            data-v-8aa074b4=""
+            viewBox="0 0 1024 1024"
+            width="24"
+            height="24"
+            class="google-icon"
+          >
+            <path
+              d="M214.101333 512c0-32.512 5.546667-63.701333 15.36-92.928L57.173333 290.218667A491.861333 491.861333 0 0 0 4.693333 512c0 79.701333 18.858667 154.88 52.394667 221.610667l172.202667-129.066667A290.56 290.56 0 0 1 214.101333 512"
+              fill="#FBBC05"
+              p-id="2855"
+            ></path>
+            <path
+              d="M516.693333 216.192c72.106667 0 137.258667 25.002667 188.458667 65.962667L854.101333 136.533333C763.349333 59.178667 646.997333 11.392 516.693333 11.392c-202.325333 0-376.234667 113.28-459.52 278.826667l172.373334 128.853333c39.68-118.016 152.832-202.88 287.146666-202.88"
+              fill="#EA4335"
+              p-id="2856"
+            ></path>
+            <path
+              d="M516.693333 807.808c-134.357333 0-247.509333-84.864-287.232-202.88l-172.288 128.853333c83.242667 165.546667 257.152 278.826667 459.52 278.826667 124.842667 0 244.053333-43.392 333.568-124.757333l-163.584-123.818667c-46.122667 28.458667-104.234667 43.776-170.026666 43.776"
+              fill="#34A853"
+              p-id="2857"
+            ></path>
+            <path
+              d="M1005.397333 512c0-29.568-4.693333-61.44-11.648-91.008H516.650667V614.4h274.602666c-13.696 65.962667-51.072 116.650667-104.533333 149.632l163.541333 123.818667c93.994667-85.418667 155.136-212.650667 155.136-375.850667"
+              fill="#4285F4"
+              p-id="2858"
+            ></path>
+          </svg>
+        </button>
+        <button id="login-facebook-button">
+          <svg
+            data-v-8aa074b4=""
+            viewBox="0 0 32 32"
+            width="24"
+            height="24"
+            class="facebook-icon"
+          >
+            <g fill="#1877F2" fill-rule="nonzero">
+              <path
+                d="M32,16 C32,7.16363637 24.8363636,0 16,0 C7.16363638,0 0,7.16363638 0,16 C0,24.8363636 7.16363638,32 16,32 C24.8363636,32 32,24.8363636 32,16 Z M11.7032727,16 L11.7032727,12.9381818 L13.5796363,12.9381818 L13.5796364,11.0865455 C13.5796364,8.58909094 14.3258182,6.78981819 17.0603637,6.78981819 L20.3127273,6.78981819 L20.3127273,9.84436366 L18.0232728,9.84436366 C16.8756364,9.84436366 16.6152727,10.6065455 16.6152727,11.4050909 L16.6152727,12.9381818 L20.144,12.9381818 L19.6625455,16 L16.6152727,16 L16.6152727,25.2349091 L13.5796364,25.2349091 L13.5796364,16 L11.7032727,16 Z"
+              ></path>
+            </g>
+          </svg>
+        </button>
+      </div>
+      <button id="login-with-qrcode">Login with qrcode</button>
+      <button class="button" id="login-button">
+        <span class="button-text">登录</span>
+      </button>
+    </div>
+    <div id="backup-modal" class="modal">
+      <div class="modal-title">Backup</div>
+      <input
+        id="backup-password-input"
+        type="text"
+        class="input"
+        placeholder="Password"
+      />
+      <button class="button" id="backup-button">
+        <span class="button-text">Send to my email</span>
+      </button>
+    </div>
+    <div id="recover-modal" class="modal">
+      <div class="modal-title">Recover</div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Private key"
+        id="recover-backup-input"
+      />
+      <input
+        type="text"
+        class="input"
+        placeholder="Password"
+        id="recover-password-input"
+      />
+      <button class="button" id="recover-button">
+        <span class="button-text">Recover with backup</span>
+      </button>
+    </div>
+    <div id="recover-device-modal" class="modal">
+      <div class="modal-title">Recover</div>
+      <input
+        type="text"
+        class="input"
+        placeholder="Password"
+        id="recover-code-input"
+      />
+      <button class="button" id="request-device-button">
+        <span class="button-text">Request</span>
+      </button>
+      <button class="button" id="recover-device-button">
+        <span class="button-text">Recover with device</span>
+      </button>
+    </div>
+    <div id="approve-modal" class="modal">
+      <div class="modal-title">Approve</div>
+      <span id="approve-code"></span>
+      <button class="button" id="approve-button">
+        <span class="button-text">Approve</span>
+      </button>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

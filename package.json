@@ -1,0 +1,24 @@
+{
+	"name": "vanilla-example",
+	"private": true,
+	"version": "0.0.96",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"typescript": "^4.6.4",
+		"vite": "^3.1.0",
+		"vite-plugin-node-polyfills": "^0.4.0"
+	},
+	"dependencies": {
+		"@sbtauth/sbtauth": "^0.5.5",
+		"@sbtauth/types": "^0.5.2",
+		"@solana/web3.js": "^1.69.0",
+		"@types/qrcode": "^1.5.0",
+		"ethers": "^5.6.9",
+		"qrcode": "^1.5.1"
+	}
+}
