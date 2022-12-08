@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sbtauth/sbtauth': ^0.5.5
+  '@sbtauth/sbtauth': ^0.5.7
   '@sbtauth/types': ^0.5.2
   '@solana/web3.js': ^1.69.0
   '@types/qrcode': ^1.5.0
@@ -12,7 +12,7 @@ specifiers:
   vite-plugin-node-polyfills: ^0.4.0
 
 dependencies:
-  '@sbtauth/sbtauth': 0.5.5
+  '@sbtauth/sbtauth': 0.5.7
   '@sbtauth/types': 0.5.2
   '@solana/web3.js': 1.70.0
   '@types/qrcode': 1.5.0
@@ -494,8 +494,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@sbtauth/sbtauth/0.5.5:
-    resolution: {integrity: sha512-U0cGAH8ZHCkhrRxPrS+2pqXy2MMdYAYfn/8FaDms3IktJJFonPMf66THUtsy08z33Q+wt87TqXQAwK5do88Aig==}
+  /@sbtauth/sbtauth/0.5.7:
+    resolution: {integrity: sha512-Iz5Tv8XOTXbibUoNs0ItColgAmLTpJfSNpFRwPwCPAJcwOEYIHO1Sz5OQCNtXfF/7S1/mnXm127cXMDmocBlmQ==}
     dependencies:
       '@sbtauth/core': 0.5.4
       '@sbtauth/provider': 0.5.2

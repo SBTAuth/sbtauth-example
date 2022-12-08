@@ -13,8 +13,6 @@
   <body>
     <h1>SBT Auth + VanillaJs</h1>
     <p class="address"></p>
-    <input type="checkbox" id="whitelist" name="whitelist" checked />
-    <label for="whitelist"> Use whitelist </label>
     <div class="card">
       <button id="connect">
         <span id="connect-loading" hidden>
@@ -34,8 +32,21 @@
       <button id="getBalance">Get Balance</button>
       <button id="signMessage">Sign Message</button>
       <button id="signTransaction">Sign Transaction</button>
+      <div>
+        <input type="checkbox" id="whitelist" name="whitelist" checked />
+        <label for="whitelist"> Use whitelist </label>
+      </div>
     </div>
-    <p style="width: 500px; text-align: center; border-top: 3px solid #bbb; padding-top: 10px">Solana(beta)</p>
+    <p
+      style="
+        width: 500px;
+        text-align: center;
+        border-top: 3px solid #bbb;
+        padding-top: 10px;
+      "
+    >
+      Solana(beta)
+    </p>
     <div class="card">
       <button id="getSolanaAccount">Get Account</button>
       <button id="getSolanaBalance">Get Balance</button>
