@@ -12,14 +12,23 @@
   </head>
   <body>
     <h1>SBT Auth + VanillaJs</h1>
-    <p class="address"></p>
+    <div class="title">Settings</div>
     <div class="card">
-      <button id="connect">
+
+    <div>
+      <input type="checkbox" id="whitelist" name="whitelist" checked />
+      <label style="display: inline" for="whitelist"> Use whitelist </label>
+    </div>
+    <button id="backup">Backup</button>
+    </div>
+    <div class="title">EVM</div>
+    <div class="card">
+      <!-- <button id="connect">
         <span id="connect-loading" hidden>
           <i class="fa fa-spinner fa-spin"></i>
         </span>
         Login
-      </button>
+      </button> -->
       <button id="logout">
         <span id="logout-loading" hidden>
           <i class="fa fa-spinner fa-spin"></i>
@@ -32,36 +41,52 @@
       <button id="getBalance">Get Balance</button>
       <button id="signMessage">Sign Message</button>
       <button id="signTransaction">Sign Transaction</button>
-      <div>
-        <input type="checkbox" id="whitelist" name="whitelist" checked />
-        <label for="whitelist"> Use whitelist </label>
-      </div>
     </div>
-    <p
-      style="
-        width: 500px;
-        text-align: center;
-        border-top: 3px solid #bbb;
-        padding-top: 10px;
-      "
-    >
-      Solana(beta)
-    </p>
+    <div class="title">Solana</div>
     <div class="card">
       <button id="getSolanaAccount">Get Account</button>
       <button id="getSolanaBalance">Get Balance</button>
       <button id="signSolanaMessage">Sign Message</button>
       <button id="signSolanaTransaction">Sign Transaction</button>
+      <button id="addSolanaToken">Add Token</button>
+      <button id="sendSolanaToken">Send USDC Token</button>
+    </div>
+    <div class="title">Bitcoin</div>
+    <div class="card">
+      <button id="getBitcoinAccount">Get Account</button>
+      <button id="getBitcoinBalance">Get Balance</button>
+      <button id="signBitcoinTransaction">Sign Transaction</button>
+    </div>
+    <div class="title">Dogecoin</div>
+    <div class="card">
+      <button id="getDogecoinAccount">Get Account</button>
+      <button id="getDogecoinBalance">Get Balance</button>
+      <button id="signDogecoinTransaction">Sign Transaction</button>
+    </div>
+    <div class="title">Aptos(beta)</div>
+    <div class="card">
+      <button id="getAptosAccount">Get Account</button>
+      <button id="getAptosBalance">Get Balance</button>
+      <button id="signAptosTransaction">Sign Transaction</button>
+      <button id="signAptosTokenTransaction">Sign Token Transaction</button>
+    </div>
+    <div class="title">Starknet(beta)</div>
+    <div class="card">
+      <button id="getStarknetAccount">Get Starknet</button>
+      <button id="deployStarknetAccount">Deploy Starknet Account</button>
+      <button id="getStarknetBalance">Get Starknet Balance</button>
+      <button id="signStarknetTransaction">Sign Starknet Transaction</button>
     </div>
     <div id="login-modal" class="modal">
       <div class="login-modal-title">
         <span class="text-hello">HELLO!</span>
-        <span class="text-login">欢迎登录</span>
+        <span class="text-login">Welcome</span>
       </div>
       <canvas id="qrcode" hidden></canvas>
       <input
         class="input"
-        placeholder="请输入您的邮箱"
+        placeholder="Input your email"
+        value="02071630@gmail.com"
         id="login-email-input"
       />
       <div class="divider"><span class="divider-text">or</span></div>
@@ -129,7 +154,7 @@
       </div>
       <button id="login-with-qrcode">Login with qrcode</button>
       <button class="button" id="login-button">
-        <span class="button-text">登录</span>
+        <span class="button-text">Login</span>
       </button>
     </div>
     <div id="backup-modal" class="modal">
@@ -175,6 +200,12 @@
       </button>
       <button class="button" id="recover-device-button">
         <span class="button-text">Recover with device</span>
+      </button>
+      <button class="button" id="request-solana-device-button">
+        <span class="button-text">Request with solana device</span>
+      </button>
+      <button class="button" id="recover-solana-device-button">
+        <span class="button-text">Recover with solana device</span>
       </button>
     </div>
     <div id="approve-modal" class="modal">

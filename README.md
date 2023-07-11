@@ -2,6 +2,6 @@
 
 ## Run example
 ```bash
-yarn
-yarn dev
+pnpm i
+pnpm dev
 ```

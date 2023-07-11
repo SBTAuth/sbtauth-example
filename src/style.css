@@ -45,6 +45,14 @@ h1 {
   text-align: center;
 }
 
+.title {
+  width: 500px;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px 0;
+  font-weight: 700;
+}
+
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -67,7 +75,7 @@ h1 {
 .card {
   padding: 2em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
 }
 
@@ -197,7 +205,7 @@ button:focus-visible {
   background-color: rgba(95, 105, 234, 1);
   border-radius: 12px;
   height: 60px;
-  margin: 54px 0 48px 0px;
+  margin: 10px 0 10px 0px;
 }
 .button-text {
   width: 28px;
