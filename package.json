@@ -16,8 +16,8 @@
 	},
 	"dependencies": {
 		"@safematrix/ord-utils": "0.2.68",
-		"@sbtauth/common": "0.8.20",
-		"@sbtauth/sbtauth": "0.8.53",
+		"@sbtauth/common": "0.8.21",
+		"@sbtauth/sbtauth": "0.8.58",
 		"@solana/spl-token": "0.3.7",
 		"@solana/web3.js": "1.77.3",
 		"@types/qrcode": "^1.5.0",

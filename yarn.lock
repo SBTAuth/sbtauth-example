@@ -481,15 +481,16 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@safematrix-auth/mpc@1.4.14":
-  version "1.4.14"
-  resolved "https://registry.npmmirror.com/@safematrix-auth/mpc/-/mpc-1.4.14.tgz#b6385ad0d59c0977375f39bcccb94084876c6a3d"
-  integrity sha512-xP5XkLBpMUuVyPWMSvAOmMgbV5sDk7lUUCmK2HA+eiQaUP6e9IbjbCQeLSRtHoa2rvz5brP7sWkh057otyGcQA==
+"@safematrix-auth/mpc@1.4.15":
+  version "1.4.15"
+  resolved "https://registry.npmmirror.com/@safematrix-auth/mpc/-/mpc-1.4.15.tgz#72d0e9d3e6d32c5dd3f307050f1f7b3fd1837213"
+  integrity sha512-iKUEhckL53ZOA8Nzw+nega2xb2XtoW0pN0Irgq0a5lAYGQ+lfGjGaCDJNagm+xkpLk0cxYxRLM71EQGMDKvU9g==
   dependencies:
     "@ethersproject/address" "^5.7.0"
     "@ethersproject/hash" "^5.7.0"
     "@types/uuid" "^8.3.4"
     bs58 "^5.0.0"
+    starknet "^4.22.0"
     uuid "^9.0.0"
 
 "@safematrix/ord-utils@0.2.68":
@@ -505,31 +506,31 @@
     uint8array-tools "^0.0.7"
     varuint-bitcoin "^1.1.2"
 
-"@sbtauth/aptos-provider@0.8.24":
-  version "0.8.24"
-  resolved "https://registry.npmmirror.com/@sbtauth/aptos-provider/-/aptos-provider-0.8.24.tgz#14fcfc2fb8c33edce466cb6a0bae2323e26df3ac"
-  integrity sha512-zACzN/Ab9+xAmuNxcrGcD+nZ1HaZqILO3M92KfHsVLxhdc/z97NOHIfTWJNi5Li+q7IxSWEk+k9BGRP7Xy9W6w==
+"@sbtauth/aptos-provider@0.8.25":
+  version "0.8.25"
+  resolved "https://registry.npmmirror.com/@sbtauth/aptos-provider/-/aptos-provider-0.8.25.tgz#c5399f31f2b28125001771bfe8c3ebeaa3d5bbcb"
+  integrity sha512-UscEk6GlENMlLpPctV4e2aedcmTfyAQouul7wOAIcmy8FYF6qeJN5rlb99DqSjNRDMXggibtiCvVESaFl0VN3g==
   dependencies:
     "@aptos-labs/wallet-adapter-core" "^1.0.1"
-    "@sbtauth/common" "0.8.20"
+    "@sbtauth/common" "0.8.21"
     aptos "^1.9.1"
 
-"@sbtauth/bitcoin-provider@0.8.22":
-  version "0.8.22"
-  resolved "https://registry.npmmirror.com/@sbtauth/bitcoin-provider/-/bitcoin-provider-0.8.22.tgz#2cf990caecc4182379cee041316adc338f1736a5"
-  integrity sha512-yUsOEu7a+YJwCUqQhDzGr/8U6Ri77UGmSsuDZUxZo7WghOo4n8CWY5MT576ZuE+Oel6YixSJThDJVDZhp+cQ7Q==
+"@sbtauth/bitcoin-provider@0.8.23":
+  version "0.8.23"
+  resolved "https://registry.npmmirror.com/@sbtauth/bitcoin-provider/-/bitcoin-provider-0.8.23.tgz#827a0fd352faa714dd9445cd139a882b2cbae628"
+  integrity sha512-V5alAWSB9DzPVMeAjwQ7XayC21GGY7bTo704hiqq2JsYMaiegNZmV3gn7kqh6zMW0qHZSGG36MMHwBtPCmaEyA==
   dependencies:
-    "@sbtauth/common" "0.8.20"
+    "@sbtauth/common" "0.8.21"
     bitcoinjs-lib-mpc "6.1.14"
     cross-fetch "^3.1.6"
     eventemitter3 "^4.0.7"
     events "^3.3.0"
     query-string "^7.1.3"
 
-"@sbtauth/common@0.8.20":
-  version "0.8.20"
-  resolved "https://registry.npmmirror.com/@sbtauth/common/-/common-0.8.20.tgz#4be1870376d5d6d7afd0374b9f9e74080f33035a"
-  integrity sha512-Vs7F16iKCESi2Cmc7RdGGPX0Aqi5iUWyPJDwSOvlUKQeYADLIb8Ud7wlFRYC3QMf+r+CSS9GsrzbOtNPJjg/4w==
+"@sbtauth/common@0.8.21":
+  version "0.8.21"
+  resolved "https://registry.npmmirror.com/@sbtauth/common/-/common-0.8.21.tgz#b2815bbd0d1aa494e6ff220c119e1310241fc36f"
+  integrity sha512-VluYUzrF0Z1otm53cdKoT15ymV+w4Qg7Zx1vedRsS3mkSoXIVZSDsmc7yAwmOYuaKx8yYnP4D69C5jTD1AHVzg==
   dependencies:
     "@solana/wallet-adapter-base" "^0.9.22"
     "@solana/web3.js" "1.77.3"
@@ -540,12 +541,12 @@
     events "^3.3.0"
     query-string "^7.1.3"
     starknet "^4.22.0"
-    tiny-secp256k1 "^2.2.2"
+    tiny-secp256k1 "2.2.2"
 
-"@sbtauth/core@0.8.33":
-  version "0.8.33"
-  resolved "https://registry.npmmirror.com/@sbtauth/core/-/core-0.8.33.tgz#dc97dd296865b24c9e1837cdab2ad21def252823"
-  integrity sha512-tGB8+wOiocoSya9ctoJXiOKDTMwaXa9tkAzpGtM6/wLoSaqM3kYmh9ct5HzA+XwbRIXgzXrn+lJmCtp9eHrOyw==
+"@sbtauth/core@0.8.36":
+  version "0.8.36"
+  resolved "https://registry.npmmirror.com/@sbtauth/core/-/core-0.8.36.tgz#f759bb4a019074bfd6d265f085174d9ff54209a5"
+  integrity sha512-NfMyUN1Cu9vR1PPAtQwETP+rLTQOfe6scTyWgU+zzE/udmzieC6BIsPx4dqvsKkAqIwgLMDbuU8DpYMZbljlTQ==
   dependencies:
     "@ethersproject/address" "^5.7.0"
     "@ethersproject/bytes" "^5.7.0"
@@ -555,23 +556,23 @@
     "@ethersproject/transactions" "^5.7.0"
     "@noble/hashes" "^1.3.1"
     "@noble/secp256k1" "^2.0.0"
-    "@safematrix-auth/mpc" "1.4.14"
+    "@safematrix-auth/mpc" "1.4.15"
     "@safematrix/ord-utils" "0.2.68"
-    "@sbtauth/common" "0.8.20"
+    "@sbtauth/common" "0.8.21"
     "@solana/web3.js" "1.77.3"
     aptos "^1.9.1"
     bech32 "^2.0.0"
     bitcoinjs-lib-mpc "6.1.14"
     eip1193-provider "^1.0.1"
     starknet "^4.22.0"
-    tiny-secp256k1 "^2.2.2"
+    tiny-secp256k1 "2.2.2"
 
-"@sbtauth/provider@0.8.20":
-  version "0.8.20"
-  resolved "https://registry.npmmirror.com/@sbtauth/provider/-/provider-0.8.20.tgz#58efc06ade0362751c38d022cd5f7508cbddee65"
-  integrity sha512-SAdruzVCLz4I3/5JaaWHPSJVHU5Ek3VGjL5vg/V/ML+TJ0KP6Zi+BPpA/SCjw3dMydYuQyrGDx0yfdT7JD4h+A==
+"@sbtauth/provider@0.8.21":
+  version "0.8.21"
+  resolved "https://registry.npmmirror.com/@sbtauth/provider/-/provider-0.8.21.tgz#2ce5e51f2e7b9ca6e9c70deef53030e69809038f"
+  integrity sha512-UQQU1uYL0UyKUbxOtMyqhL8mTrkD33uK2IgIpmf+QnIYivhTqSUlY00g+xN0HwvCMo9eBxHlWpQe9PJC8rqKfw==
   dependencies:
-    "@sbtauth/common" "0.8.20"
+    "@sbtauth/common" "0.8.21"
     "@sbtauth/ui" "0.8.6"
     "@walletconnect/jsonrpc-provider" "^1.0.13"
     "@walletconnect/jsonrpc-utils" "^1.0.8"
@@ -582,18 +583,18 @@
     events "^3.3.0"
     query-string "^7.1.3"
 
-"@sbtauth/sbtauth@0.8.53":
-  version "0.8.53"
-  resolved "https://registry.npmmirror.com/@sbtauth/sbtauth/-/sbtauth-0.8.53.tgz#e299d1a9474567be24a234c96358b461e1cebbfc"
-  integrity sha512-FymnGHpadf+C1Z2YGZOlWGL4RYLtJGXQ1USbF7wX+l2W9oLk16cro/bBbPDjnuuqcL/6W7nJY7F/WQU0JylxSg==
+"@sbtauth/sbtauth@0.8.58":
+  version "0.8.58"
+  resolved "https://registry.npmmirror.com/@sbtauth/sbtauth/-/sbtauth-0.8.58.tgz#8af8fe0de3a2a586c59472d63b28fe8a886f666f"
+  integrity sha512-h30118K9plI5+n9yFDeXz9rBrC/kaRO3H8Dxm9A4c/tw4T8PMQq2P8e5jNIBaPb4MbwJsZfnF7hyoEdnsjtUDw==
   dependencies:
-    "@sbtauth/aptos-provider" "0.8.24"
-    "@sbtauth/bitcoin-provider" "0.8.22"
-    "@sbtauth/common" "0.8.20"
-    "@sbtauth/core" "0.8.33"
-    "@sbtauth/provider" "0.8.20"
-    "@sbtauth/solana-provider" "0.8.22"
-    "@sbtauth/starknet-provider" "0.8.6"
+    "@sbtauth/aptos-provider" "0.8.25"
+    "@sbtauth/bitcoin-provider" "0.8.23"
+    "@sbtauth/common" "0.8.21"
+    "@sbtauth/core" "0.8.36"
+    "@sbtauth/provider" "0.8.21"
+    "@sbtauth/solana-provider" "0.8.23"
+    "@sbtauth/starknet-provider" "0.8.7"
     "@types/crypto-js" "^4.1.1"
     bowser "^2.11.0"
     ethers "^5.7.2"
@@ -601,12 +602,12 @@
     query-string "^7.1.3"
     sbt-encrypt "^0.3.1"
 
-"@sbtauth/solana-provider@0.8.22":
-  version "0.8.22"
-  resolved "https://registry.npmmirror.com/@sbtauth/solana-provider/-/solana-provider-0.8.22.tgz#96464a09408e91ebc11effc8ddb568eb8232ba0c"
-  integrity sha512-quXpkEnRigy7py+g1uKjKqUTEamTr5WDP2gmHNzctVULFOvGUfzNrEdunxxRVMLuUJCmpRI7SsHq6QSyqVkmXw==
+"@sbtauth/solana-provider@0.8.23":
+  version "0.8.23"
+  resolved "https://registry.npmmirror.com/@sbtauth/solana-provider/-/solana-provider-0.8.23.tgz#9d335a71e91d4a3e1480b1d61838123650c44ab1"
+  integrity sha512-AunzZmnJ4zwUjmmW+D6km/LWjINMtqTNDWwLOtzs8vPF6EDV4qJeOW4K1YJglQsVBPNucnMGwBJrYOpp8SNsOA==
   dependencies:
-    "@sbtauth/common" "0.8.20"
+    "@sbtauth/common" "0.8.21"
     "@sbtauth/ui" "0.8.6"
     "@solana/wallet-adapter-base" "^0.9.22"
     "@solana/web3.js" "1.77.3"
@@ -619,12 +620,12 @@
     events "^3.3.0"
     query-string "^7.1.3"
 
-"@sbtauth/starknet-provider@0.8.6":
-  version "0.8.6"
-  resolved "https://registry.npmmirror.com/@sbtauth/starknet-provider/-/starknet-provider-0.8.6.tgz#79345f77066aac46162cf8de9f80b8518f890439"
-  integrity sha512-zT+hBitxc7HYKM5sq6+L+wqa9ckvdg6bYesDPx6lwQejRI3pPHLDrUBO6VnWAER2GzmbqoNyZIBg8azmBMIRsw==
+"@sbtauth/starknet-provider@0.8.7":
+  version "0.8.7"
+  resolved "https://registry.npmmirror.com/@sbtauth/starknet-provider/-/starknet-provider-0.8.7.tgz#a81a0f114de50cae55e363c9f98d134b168af3f5"
+  integrity sha512-SfdkUlyyKL0oG7J+5yfNSQkrmNf8n+sQd0BnT9/TdVs8q9ZiYppb+U5vYtkwcXdWlf3Ix9Gs3QaV4tgILRCw3g==
   dependencies:
-    "@sbtauth/common" "0.8.20"
+    "@sbtauth/common" "0.8.21"
     starknet "^4.22.0"
 
 "@sbtauth/ui@0.8.6":
@@ -2506,6 +2507,13 @@ timers-browserify@^2.0.4:
   integrity sha512-9phl76Cqm6FhSX9Xe1ZUAMLtm1BLkKj2Qd5ApyWkXzsMRaA7dgr81kf4wJmQf/hAvg8EEyJxDo3du/0KlhPiKQ==
   dependencies:
     setimmediate "^1.0.4"
+
+tiny-secp256k1@2.2.2:
+  version "2.2.2"
+  resolved "https://registry.npmmirror.com/tiny-secp256k1/-/tiny-secp256k1-2.2.2.tgz#3600e24844cb6390876ef11174116c0386d129bf"
+  integrity sha512-KP3eqslmiUH9jxhyQuLY+GqI4wt1EiHWNHHqKVUxCZV41+MT+esucaK4mb6Ji0vKWVKBffJ6tlxU83Pq5TIUwg==
+  dependencies:
+    uint8array-tools "0.0.7"
 
 tiny-secp256k1@^2.2.2:
   version "2.2.3"
